@@ -6,7 +6,6 @@ import (
 )
 
 func producer(stream Stream, tweets chan *Tweet, quit chan bool) {
-
 	for {
 		tweet, err := stream.Next()
 		if err == ErrEOF {
